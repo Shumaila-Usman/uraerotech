@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     const hashedPassword = await bcrypt.hash(password, 10)
 
     // Create user
-    const user = fileDb.create('User', {
+    const user = fileDb.create<any>('User', {
       email,
       name: name || null,
       password: hashedPassword,

@@ -1,0 +1,29 @@
+[
+  {
+    "email": "admin@uraerotech.com",
+    "name": "Admin User",
+    "password": "$2a$10$DJhHJ8TY1V0S4Mb/6zdmNOPqCXhsiwmnUhQ55t3/iEACy6aXOwJzy",
+    "role": "ADMIN",
+    "id": "mmgpvbxc7zvjropbwyx",
+    "createdAt": "2026-03-07T19:28:52.512Z",
+    "updatedAt": "2026-03-07T19:28:52.517Z"
+  },
+  {
+    "email": "b2b@example.com",
+    "name": "B2B User",
+    "password": "$2a$10$tBWYdAqeWTRgAq8TUa6/Ousm0BVGVtldVWzXSx1ikFP7Yg26XyGkC",
+    "role": "B2B",
+    "id": "mmgpvc3fh7lyrem35um",
+    "createdAt": "2026-03-07T19:28:52.731Z",
+    "updatedAt": "2026-03-07T19:28:52.731Z"
+  },
+  {
+    "email": "test@gmail.com",
+    "name": "test",
+    "password": "$2a$10$4ZGfKpXtQldi.8TRcdPFhOyqxEzJ5iE/TAoiKpMh2wIM7E2qQdjK2",
+    "role": "B2C",
+    "id": "mmgs8c2lvqr1r7vd0bn",
+    "createdAt": "2026-03-07T20:34:58.461Z",
+    "updatedAt": "2026-03-07T20:34:58.465Z"
+  }
+]

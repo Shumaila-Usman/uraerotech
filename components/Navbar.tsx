@@ -312,7 +312,7 @@ export function Navbar() {
                   
                   {/* Categories List */}
                   <div className="max-h-[500px] overflow-y-auto">
-                    <div className="p-2 space-y-1 pb-8">
+                    <div className="p-2 space-y-1 pb-12">
                       {categories.map((category) => (
                         <Link
                           key={category.id}
@@ -344,7 +344,7 @@ export function Navbar() {
                       ))}
                     </div>
                     {/* Bottom padding to show rounded corners */}
-                    <div className="h-8 bg-gradient-to-br from-slate-950 via-indigo-950 to-sky-900 rounded-b-2xl"></div>
+                    <div className="h-10 bg-gradient-to-br from-slate-950 via-indigo-950 to-sky-900 rounded-b-2xl"></div>
                   </div>
                 </div>
               </div>

@@ -155,7 +155,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                       >
                         <Link
                           href={`/products?category=${encodeURIComponent(categorySlug)}`}
-                          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/15 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 group flex flex-col items-center justify-center min-h-[160px]"
+                          className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/15 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 group flex flex-col items-center justify-center min-h-[160px] h-full"
                         >
                           <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                             {icon}
@@ -163,7 +163,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                           <h3 className="text-white font-semibold text-sm md:text-base mb-2 group-hover:text-blue-300 transition-colors">
                             {categoryName}
                           </h3>
-                          <p className="text-white/60 text-xs line-clamp-2 leading-relaxed">
+                          <p className="text-white/60 text-xs line-clamp-2 leading-relaxed flex-1">
                             {categoryDescription}
                           </p>
                         </Link>

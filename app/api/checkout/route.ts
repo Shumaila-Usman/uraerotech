@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { fileDb } from '@/lib/file-db'
+import type { Product } from '@/types/file-db'
 
 export async function POST(req: NextRequest) {
   try {
@@ -17,7 +18,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Product ID is required' }, { status: 400 })
     }
 
-    const product = fileDb.findUnique<any>('Product', { id: productId })
+    const product = fileDb.findUnique<Product>('Product', { id: productId })
 
     if (!product) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 })
@@ -43,7 +44,7 @@ export async function POST(req: NextRequest) {
     })
 
     // Update product stock
-    fileDb.update('Product', { id: productId }, {
+    fileDb.update<Product>('Product', { id: productId }, {
       stock: product.stock - quantity,
     })
 

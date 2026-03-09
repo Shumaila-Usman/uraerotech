@@ -74,12 +74,13 @@ export const fileDb = {
   // Create
   create<T extends { id?: string }>(collection: string, data: Omit<T, 'id'>): T {
     const items = readCollection<T>(collection)
+    // We know this matches T because all our stored models follow this shape
     const newItem = {
       ...data,
       id: generateId(),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-    } as T
+    } as unknown as T
     items.push(newItem)
     writeCollection(collection, items)
     return newItem
@@ -140,4 +141,5 @@ export const fileDb = {
     return data.length
   },
 }
+
 

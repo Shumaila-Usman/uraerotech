@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { fileDb } from '@/lib/file-db'
-import { QuoteStatus } from '@/types/file-db'
+import type { Quote, QuoteStatus } from '@/types/file-db'
 
 export async function PATCH(
   req: NextRequest,
@@ -22,7 +22,7 @@ export async function PATCH(
       return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
     }
 
-    const quote = fileDb.update('Quote', { id: params.id }, {
+    const quote = fileDb.update<Quote>('Quote', { id: params.id }, {
       status: status as QuoteStatus,
       adminNotes: adminNotes || null,
     })

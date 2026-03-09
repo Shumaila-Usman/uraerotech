@@ -49,13 +49,15 @@ export default function ServicesPage() {
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 sm:p-6 card-hover block"
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 sm:p-6 card-hover flex flex-col h-full"
                 >
                   <div className="h-32 sm:h-40 md:h-48 bg-gradient-aviation/20 rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
                     <span className="text-4xl sm:text-5xl">{service.icon}</span>
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">{service.name}</h3>
-                  <p className="text-white/70 mb-3 sm:mb-4 line-clamp-3 text-sm sm:text-base">{service.description}</p>
+                  <p className="text-white/70 mb-3 sm:mb-4 line-clamp-3 text-sm sm:text-base flex-1">
+                    {service.description}
+                  </p>
                   <span className="inline-block px-4 sm:px-6 py-2 bg-gradient-aviation rounded-lg text-white font-semibold text-sm sm:text-base">
                     Learn More →
                   </span>

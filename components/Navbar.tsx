@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useSession, signOut } from 'next-auth/react'
 import { useState, useEffect, useRef } from 'react'
-import { UserRole } from '@prisma/client'
 import { getAllCategories } from '@/data/categories'
 
 export function Navbar() {

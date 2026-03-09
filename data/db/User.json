@@ -25,5 +25,14 @@
     "id": "mmgs8c2lvqr1r7vd0bn",
     "createdAt": "2026-03-07T20:34:58.461Z",
     "updatedAt": "2026-03-07T20:34:58.465Z"
+  },
+  {
+    "email": "ye@gmail.com",
+    "name": "yee",
+    "password": "$2a$10$JrxsE0pXf0jf3JQf6D82O.T4GfLjJESNUYTIKlcaQSIArI1zEwf1G",
+    "role": "B2C",
+    "id": "mmjkz3wxouk8py4ubq",
+    "createdAt": "2026-03-09T19:35:09.201Z",
+    "updatedAt": "2026-03-09T19:35:09.202Z"
   }
 ]

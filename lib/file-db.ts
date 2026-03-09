@@ -1,12 +1,14 @@
 import fs from 'fs'
 import path from 'path'
 
-// Use a writable directory. In serverless environments like Vercel, /var/task is read-only,
-// but /tmp is writable. Locally we still use the project directory.
+// Use a writable directory.
+// - In development, write to the project folder for easier inspection.
+// - In any non-development environment (Vercel preview/prod, Node prod), write to /tmp,
+//   because the Lambda filesystem (e.g. /var/task) is read-only.
 const DATA_DIR =
-  process.env.VERCEL || process.env.NODE_ENV === 'production'
-    ? path.join('/tmp', 'data', 'db')
-    : path.join(process.cwd(), 'data', 'db')
+  process.env.NODE_ENV === 'development'
+    ? path.join(process.cwd(), 'data', 'db')
+    : path.join('/tmp', 'data', 'db')
 
 // Ensure data directory exists
 if (!fs.existsSync(DATA_DIR)) {

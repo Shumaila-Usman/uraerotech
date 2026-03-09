@@ -1,7 +1,12 @@
 import fs from 'fs'
 import path from 'path'
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'db')
+// Use a writable directory. In serverless environments like Vercel, /var/task is read-only,
+// but /tmp is writable. Locally we still use the project directory.
+const DATA_DIR =
+  process.env.VERCEL || process.env.NODE_ENV === 'production'
+    ? path.join('/tmp', 'data', 'db')
+    : path.join(process.cwd(), 'data', 'db')
 
 // Ensure data directory exists
 if (!fs.existsSync(DATA_DIR)) {

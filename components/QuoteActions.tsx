@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { QuoteStatus } from '@prisma/client'
+import type { QuoteStatus } from '@/types/file-db'
 
 interface QuoteActionsProps {
   quoteId: string
